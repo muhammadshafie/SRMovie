@@ -28,7 +28,6 @@ function App() {
     fetch(API)
     .then((response)=> response.json())
     .then((data) => {
-      console.log(data.results);
       setMovies(data.results);
     })
   };
@@ -37,7 +36,6 @@ function App() {
     fetch(API)
     .then((response)=> response.json())
     .then((data) => {
-      console.log(data.results);
       setTrendMovies(data.results);
     })
   }

@@ -8,6 +8,9 @@ const Intro = ({ searchTerm, setSearchTerm, SEARCH_API, getMovies }) => {
         if(searchTerm) {
             getMovies(SEARCH_API+searchTerm);
             setSearchTerm('');
+            if (e.key === "Enter") {
+                e.target.blur();
+            }
         }
     
     };
