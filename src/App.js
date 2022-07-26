@@ -19,7 +19,7 @@ function App() {
   
   useEffect(() => {
     {/* This get all movie list */}
-    getMovies(`${BASE_URL}/discover/movie/${API_KEY}`);
+    getMovies(`${BASE_URL}/discover/movie${API_KEY}`);
     getTrendingMovies(TRENDING_API+API_KEY);
   }, []);
 
