@@ -18,16 +18,38 @@ code {
     monospace;
 }
 
-.header-gap {
-  padding-top: 60px;
-}
-
 .header-bg {
   background-color: #833ab4;
 }
 
+#all {
+  font-size: calc( 1em + 5vmin );
+  font-weight: 900;
+  color: #eeaeca;
+  
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+  
+  text-shadow: 
+  
+    var(--x-offset)
+    var(--y-offset)
+    0px
+    var(--background-color), 
+    
+    calc( var(--x-offset) - var(--stroke) )
+    calc( var(--y-offset) + var(--stroke) )
+    0px
+    var(--stroke-color);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 #trending {
-  padding-top: 60px;
   font-size: calc( 1em + 5vmin );
   font-weight: 900;
   color: #eeaeca;
@@ -55,9 +77,11 @@ code {
 }
 
 .search {
-  background-color: transparent;
-  border: 2px solid whitesmoke;
-  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: slategray;
+  border: 2px solid black;
+  border-radius: 40px;
   color: #fff;
   font-family: inherit;
   font-size: 1rem;
@@ -73,9 +97,7 @@ code {
 }
 
 .myBg {
-  justify-content: center;
-  align-items: center;
-  height: 60vh;
+  height: 600px;
   background: url('../src/assets/images/bg1.jpg');
   background-size: cover;
   background-color: black;
@@ -107,7 +129,7 @@ code {
 }
 
 .intro {
-  height: 300px;
+  height: 450px;
   display: flex;
   justify-content: end;
   align-items: end;

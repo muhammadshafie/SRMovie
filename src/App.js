@@ -56,18 +56,19 @@ function App() {
   return (
     <div className="App">
 
-      <div className='header-gap' id="all">
-        <NavBar
-        searchTerm={searchTerm} 
-        setSearchTerm={setSearchTerm}
-        SEARCH_API={SEARCH_API}
-        getMovies={getMovies}
-        />
+      <div className='header-gap' >
+        <NavBar />
       </div>
       <div className='myBg'>
-      <Intro />
+      <Intro 
+      searchTerm={searchTerm} 
+      setSearchTerm={setSearchTerm}
+      SEARCH_API={SEARCH_API}
+      getMovies={getMovies}
+      />
       </div>
-      <div className='movie-container pt-4'>
+      <h1 id='all'>MOVIES</h1>
+      <div className='movie-container'>
         {movies.length > 0 && movies.map((movie) => (
 
           <Movie key={movie.id} {...movie} IMG_API={IMG_API} setVoteClass={setVoteClass}/>
