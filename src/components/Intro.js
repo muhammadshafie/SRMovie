@@ -3,14 +3,12 @@ import { Col, Container, Row, Button } from 'react-bootstrap'
 
 const Intro = ({ searchTerm, setSearchTerm, SEARCH_API, getMovies }) => {
     const handleOnSubmit = (e) => {
+        e.target[0].blur();
         e.preventDefault();
         
         if(searchTerm) {
             getMovies(SEARCH_API+searchTerm);
             setSearchTerm('');
-            if (e.key === "Enter") {
-                e.target.blur();
-            }
         }
     
     };
